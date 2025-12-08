@@ -2,6 +2,7 @@
 lib/aqtkpico_esp32
 lib/aquestalk_esp32
 lib/aquestalk-esp32
+src/example/
 src/*.ino
 const.h
 /tmp/

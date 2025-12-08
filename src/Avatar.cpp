@@ -47,7 +47,6 @@ TaskHandle_t drawTaskHandle;
 TaskHandle_t facialTaskHandle;
 
 TaskResult_t drawLoop(void *args) {
-  Serial.println("drawLoop started");
   DriveContext *ctx = reinterpret_cast<DriveContext *>(args);
   Avatar *avatar = ctx->getAvatar();
   // update drawings in the display
@@ -71,8 +70,6 @@ TaskResult_t drawLoop(void *args) {
 }
 
 TaskResult_t facialLoop(void *args) {
-  Serial.println("facialLoop started");
-
   int count = 0;
   DriveContext *ctx = reinterpret_cast<DriveContext *>(args);
   Avatar *avatar = ctx->getAvatar();
@@ -222,11 +219,9 @@ void Avatar::resume() {
 }
 
 void Avatar::start(int colorDepth) {
-  Serial.println("Avatar::start called");
   // if the task already started, don't create another task;
   if (_isDrawing) return;
   _isDrawing = true;
-  Serial.println("Avatar::start _isDrawing");
 
   this->colorDepth = colorDepth;
   DriveContext *ctx = new DriveContext(this);
