@@ -10,7 +10,7 @@ void setup()
 {
   Display.begin();
   Display.setRotation(1);     // 画面回転(横向き)
-  Display.setBrightness(255); // バックライト100%(全点灯)
+//Display.setBrightness(255); // バックライト100%(全点灯)
   Display.fillScreen(TFT_BLACK);
 
   avatar.init(); // start drawing
