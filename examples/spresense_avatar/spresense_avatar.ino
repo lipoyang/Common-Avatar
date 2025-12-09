@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "Display.h"
+#include <Display.h>
 #include <Avatar.h>
 
 using namespace m5avatar;

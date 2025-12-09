@@ -10,7 +10,7 @@
 #define TFT_RST       7
 #define TFT_BL        9
 
-// 画面デバイスの定義 (仮)
+// 画面デバイスの定義
 class MyLGFX : public lgfx::LGFX_Device
 {
   lgfx::Panel_ST7789  _panel_instance;
