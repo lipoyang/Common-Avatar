@@ -45,7 +45,8 @@ void setup()
   avatar.setSpeechText("こんにちは");
 }
 
-char* strdata[]={
+// 動的にロードする文字列
+const char* strdata[]={
   "葡萄美酒夜光杯",
   "欲飲琵琶馬上催",
   "酔臥沙場君莫笑",
@@ -63,10 +64,9 @@ void loop()
 
   usleep(1000*1000);
   avatar.setSpeechText("こんにちは");
-/*
+
   usleep(1000*1000);
   font.loadGlyphCache(strdata[cnt]);
   avatar.setSpeechText(strdata[cnt]);
   cnt = (cnt + 1) % 4;
-*/
 }
